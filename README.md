@@ -1,4 +1,4 @@
-# GEN220_2021
-GEN220 2021 edition
+# GEN220 2022
+GEN220 2022 edition
 
-https://biodataprog.github.io/GEN220_2021/
+https://biodataprog.github.io/GEN220_2022/
