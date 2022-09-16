@@ -13,9 +13,9 @@ today is to analyze large amount of biological data. The objective of
 this course is to provide an opportunity for graduate students with no
 computer science background to learn the basic skills of handling high
 throughput biological data. It covers the Linux/Unix environment and
-the importance of the com1mand line interface; the Python programming
+the importance of the command line interface; the Python programming
 language; program design, implementation, and testing; BioPython;
-Strategies for analyzing genome resequencing, RNASeq, sequencing data.
+Strategies for analyzing genome resequencing, RNASeq, and microbiome sequencing data.
 Students build hands-on skills by analyzing real high throughput
 biological data through homework assignments and team projects.
 
@@ -23,11 +23,11 @@ Units: 3
 
 Instructor: Jason Stajich (jason.stajich@ucr.edu)
 
-Time and location: W/F 3:00-4:30PM Zoom-land
+Time and location: W/F 3:00-4:30PM  Campbell Hall 104
 
-Office Hours:
+Office Hours: M (via Zoom)
 
-[https://biodataprog.github.io/GEN220_2021/](https://biodataprog.github.io/GEN220_2021/)
+[https://biodataprog.github.io/GEN220_2022/](https://biodataprog.github.io/GEN220_2022/)
 
 Prerequisites
 -------------
