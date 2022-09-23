@@ -122,29 +122,27 @@ Schedule
 
 | Date	| Day |	Lecture Topic	|	Notes
 | :------ | :---- | :---------------------- | :------------ |
-| Sept-24 |	F	|	Course Intro / UNIX I: Cmdline, GitHub	|	|
-| Sept-29	|	W	|	UNIX II: Biocluster HPCC, Running programs |	|
-| Oct-1	|	F	|	UNIX III: Tools for data processing	| Homework 1 Due  |
-| Oct-6	|	W	|	UNIX IV: Advanced UNIX and data processing	|	|
-| Oct-8	|	F	|	Python I - Variables, running, cmdline, strings, math	| Homework 2 Due  |
-| Oct-13	|	W	|	Python II - Logic, loops, lists, iterator; I/O reading/writing files	|	 |
-| Oct-15	|	F	|	Python III - Dictionaries, Arrays, functions	|  Homework 3 Due  |
-| Oct-20	|	W	|	Python IV - Structured data parsing (GFF, CSV, BED)	 |	|
-| Oct-22	|	F	|	Python V - BioPython, Pandas | 	|
-| Oct-27	|	W	|	(No Live lecture class - recorded Video to be posted TBD)	| |
-| Oct-29	|	F	|	Alignment and Bioinformatics Algorithms; LAST, cmdline & automation	| Homework 4 Due |
-| Nov-3	|	W	|	Bioinformatics I - Aligning short reads, coverage, identifying variants	|	|
-| Nov-5 |	F	|	Bioinformatics II - RNASeq analyses	|	|
-| Nov-10	|	W	|	Bioinformatics III - Genome Assembly	|  |
-| Nov-12 |	F |	Bioinformatics IV - Protein Sequence analyses (HMMER, InterPro, SignalP)  |	|
-| Nov-17 |	W |	Bioinformatics V - Orthology, Phylogenetics and automation | Homework 5 Due 	|
-| Nov-19	|	F	|  Databases - SQLite |	|
-| Nov-24 |	W |	Review Bioinformatics and Databases | Extra Topics	|
-| Nov-26 |	F |	**NO CLASS - Native American Heritage Day** | 	|
-| Dec-1	|	 W |  Data visualization in R and python | 	|
-| Dec-3	|	F	| 	Automation and workflows|		|
-| Dec-8	|	W | Review Topics |  |
-| Dec-10	|	F | Class Presentations |  |
-| Dec-15 | W | Final Project Reports Due | |
+| Sept-23 |	F	|	Course Intro / UNIX I: Cmdline, GitHub	|	|
+| Sept-28	|	W	|	UNIX II: Biocluster HPCC, Running programs |	|
+| Sept-30	|	F	|	UNIX III: Tools for data processing	| Homework 1 Due  |
+| Oct-5	|	W	|	UNIX IV: Advanced UNIX and data processing	|	|
+| Oct-7	|	F	|	Python I - Variables, running, cmdline, strings, math	| Homework 2 Due  |
+| Oct-12	|	W	|	Python II - Logic, loops, lists, iterator; I/O reading/writing files	|	 |
+| Oct-14	|	F	|	Python III - Dictionaries, Arrays, functions	|  Homework 3 Due  |
+| Oct-19	|	W	|	Python IV - Structured data parsing (GFF, CSV, BED)	 |	|
+| Oct-21	|	F	|	Python V - BioPython, Pandas | 	|
+| Oct-26	|	W	|	Python Data / Bioinformatics I	| |
+| Oct-28	|	F	|	Alignment and Bioinformatics Algorithms; BLAST cmdline & automation	| Homework 4 Due |
+| Nov-2	|	W	|	Bioinformatics I - Aligning short reads, coverage, identifying variants	|	|
+| Nov-4 |	F	|	Bioinformatics II - RNASeq analyses	|	|
+| Nov-9	|	W	|	Bioinformatics III - Genome Assembly	|  |
+| Nov-11 |	F |	No Class - Holiday  |	|
+| Nov-16 |	W |	Bioinformatics IV - Protein Sequence analyses (HMMER, InterPro, SignalP) | Homework 5 Due 	|
+| Nov-19	|	F	|  Bioinformatics V - Orthology, Phylogenetics and automation |	|
+| Nov-23 |	W |	Review Bioinformatics and Databases | Extra Topics	|
+| Nov-25 |	F |	**NO CLASS - Native American Heritage Day** | 	|
+| Nov-30	|	 W |  Data visualization in R and python | 	|
+| Dec-2	|	F	|  Class Presentations |		|
+| Dec-9 | F | Final Project Reports Due | |
 
 ----------
