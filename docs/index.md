@@ -1,15 +1,15 @@
-# GEN220: Highthroughput Biological Data Analysis - Fall 2021
+# GEN220: Highthroughput Biological Data Analysis - Fall 2022
 
 See the [Syllabus](Resources/Syllabus) [PDF](Resources/Syllabus.pdf)
 for an overview of lecture topics.
 
 We will use [Piazza](https://piazza.com/class/kttnhd4ixa3387)  for discussions and Q&A.
 
-Examples worked during class will be uploaded in [this working repository](https://github.com/biodataprog/GEN220_2021_examples).
+Examples worked during class will be uploaded in [this working repository](https://github.com/biodataprog/GEN220_2022_examples).
 To check it out and keep it update.
 ```
-git clone https://github.com/biodataprog/GEN220_2021_examples.git
-cd GEN220_2021_examples
+git clone https://github.com/biodataprog/GEN220_2022_examples.git
+cd GEN220_2022_examples
 # ... time passes, new examples are uploaded
 git pull # to get the latest version of the files
 
@@ -30,7 +30,11 @@ git clone https://github.com/biodataprog/GEN220_data.git
 * [UNIX](UNIX) Shell scripting and using [HPCC](http://hpcc.ucr.edu)
 * [Python](Python) Programming
 * [Bioinformatics](Bioinfomatics) analysis methods
-* Editors [VIM/VI](http://hpcc.ucr.edu/manuals_linux-basics_vim.html) [Nano](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/) [Emacs](https://www.gnu.org/software/emacs/tour/) [Emacs Manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
+* Editors
+  ** [VIM/VI](http://hpcc.ucr.edu/manuals_linux-basics_vim.html)
+  ** [Nano](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
+  ** [Emacs](https://www.gnu.org/software/emacs/tour/)
+  ** [Emacs Manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
 
 # Homework
 
@@ -42,8 +46,7 @@ git clone https://github.com/biodataprog/GEN220_data.git
 
 * [Project Team Ideas](Assignments/Project_Ideas) [PDF](Assignments/Project_Ideas.pdf)
 * [Project Team Report Template](Assignments/Project_Report_Template) [PDF](Assignments/Project_Report_Template.pdf)
-* [Project Presentation Info](Assignments/Project_Presentation) [PDF](Assignemnts/Project_Presentation.pdf)
-* The 2019 project ideas are [here](Assignments/Project_Teams.2019) [PDF](Assignments/Project_Teams.2019.pdf)
+* [Project Presentation Info](Assignments/Project_Presentation) [PDF](Assignments/Project_Presentation.pdf)
 
 # Lectures
 
