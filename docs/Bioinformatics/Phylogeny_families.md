@@ -5,8 +5,8 @@ Last day of class is usually a mix of trying to find gaps or fill in holes.
 I discussed phylogenetic tree building.
 
 ```bash
-git clone https://github.com/biodataprog/GEN220_2021_examples.git
-cd GEN220_2021_examples/Trees
+git clone https://github.com/biodataprog/GEN220_2022_examples.git
+cd GEN220_2022_examples/Trees
 module load muscle
 module load fasttree
 module load hmmer/3
