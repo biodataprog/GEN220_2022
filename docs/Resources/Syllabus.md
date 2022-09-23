@@ -136,7 +136,7 @@ Schedule
 | Nov-2	|	W	|	Bioinformatics I - Aligning short reads, coverage, identifying variants	|	|
 | Nov-4 |	F	|	Bioinformatics II - RNASeq analyses	|	|
 | Nov-9	|	W	|	Bioinformatics III - Genome Assembly	|  |
-| Nov-11 |	F |	No Class - Holiday  |	|
+| Nov-11 |	F |	**No Class - Holiday**  |	|
 | Nov-16 |	W |	Bioinformatics IV - Protein Sequence analyses (HMMER, InterPro, SignalP) | Homework 5 Due 	|
 | Nov-19	|	F	|  Bioinformatics V - Orthology, Phylogenetics and automation |	|
 | Nov-23 |	W |	Review Bioinformatics and Databases | Extra Topics	|
