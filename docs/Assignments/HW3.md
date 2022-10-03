@@ -1,57 +1,38 @@
-# Homework 2
+# Homework 3
 
-This assignment calls for two scripts. They are both started in the template.
-Create the repository by clicking on the HW3 link. https://piazza.com/ucr/fall2022/gen220/resources
+Lists, combinations, and permutations
 
-## Simple Count and Report
+Consider the experiment you want to establish comparing the interactions between pairs of organisms. This could be plants or microbes where you want to establish these in common growing wells
+or you could imagine this is a genotype of a plant/animal and a combination of a treatment (pesticide, fertilizer etc).
 
-Write a program called `squared_cubed.py` and prints out three columns of data, ideally, separated by tabs.
-A header line should be written which is labels of the columns
+Consider the simple case of a set of 10 individuals you can label A-J.
+You want to first make a list of all the unique pairwise combinations. This means AB is the same as BA so you only want to see it once.
+
+For a set of 5 individuals A-E the number of pairwise combinations is AB,AC,AD,AE, BC,BD,BE, CD,CE. If we consider a pairing of the same organism as a control we need to add in
+AA, BB, CC, DD, EE. So the total count is 14.
+
 ```
-N    Squared    Cubed
+---------------------
+| AB | AC | AD | AE |
+| ------------------|
+| BC | BD | BE | CD |
+| ------------------|
+| CE | AA | BB | CC |
+|-------------------|
+| DD | EE |    |    |
+|-------------------|
 ```
+1. Write a program to generate the set of all pairwise combinations given a single input list of individuals.
 
-Column 1: numbers 0 -> 30
-Column 2: Square (x^2) of column 1
-Column 3: Cubes (x^3) of column 2
-
-Output should look like this (but going up to at least 30 for for the N column)
+2. Print out this list in a grid. Make the number of columns that are printed a variable. You can keep it simple and just print out a comma delimited. for example if the number of columns is 3 this will suffice.
+If you have your program produce this result, make sure the name of the file is ".csv" and save it into your github for the project it will show up as a nicely formatted table on the web.
 ```
-N	Squared	Cubed
-0	0	0
-1	1	1
-2	4	8
-3	9	27
-4	16	64
-5	25	125
-```
+,Col1,Col2,Col3
+Row1,AA,AB,AC
+Row2,AD,AE,BC
+....
+````
 
-## Genome Stats
+3. Write a second program or option to your program that randomizes the list so the output order of the sample pairs is shuffled
 
-We will compute some statistics for a tab delimited file called GFF which lists
-the location of genes and exons location in a genome annotation. Remember
-[GFF](https://en.m.wikipedia.org/wiki/General_feature_format) is a
-structured format, tab delimited, which describes locations of
-features in a genome.
-
-Recall eukaryotic Genes are made up of features: exons, introns, Untranslated regions (UTR). Some exons are coded as 'CDS' for CoDing Sequences - eg the ones that code for proteins.
-
-See [Wikipedia gene](https://en.wikipedia.org/wiki/Gene) page and view of [Gene structure in particular](https://en.wikipedia.org/wiki/File:Gene_structure_eukaryote_2_annotated.svg)
-
-Here is a GFF file for the _Penicillium chrysosporium_ genome, which is the fungus which gave us one of the first antibiotics.
-The FungiDB database hosts genome sequences and data files for a collection of fungi.
-
-The GFF file is available here [FungiDB-54_PchrysosporiumRP-78.gff](https://fungidb.org/common/downloads/release-54/PchrysosporiumRP-78/gff/data/FungiDB-54_PchrysosporiumRP-78.gff) and FastA format genome assembly is [FungiDB-54_PchrysosporiumRP-78_Genome.fasta](https://fungidb.org/common/downloads/release-54/PchrysosporiumRP-78/fasta/data/FungiDB-54_PchrysosporiumRP-78_Genome.fasta). These are two files related to location of genes and sequence data.
-
-Write a script called `genome_stats.py` to:
-1. Download these file (this can be in UNIX before you run your python script or you can incorporate this into the python).  I already wrote part of this for you in the template code you can start with that executes a `curl` command from within your script. But if this doesn't make sense to you, you can remove that.
-2. **Print out** the number of exons, CDS, protein_coding_gene features found in the genome annotation (GFF file)
-3. Compute and **print out** the total length of all the protein_coding_gene features (length is the END - START).
-4. Compute and **print out** total length of all the CDS features (length is the END - START).
-5. Use the FASTA file to compute the total length of genome (by adding up the length of each sequence in the file). Recall I lectured on a basic code to read in a FASTA file - you can also see that code template [here](https://github.com/biodataprog/code_templates/blob/master/Lists_Dictionaries/fasta_parser.py), **Print out** the total length.
-6. *Print out* the percentage of the genome which is coding (using the numbers calculated from the protein_coding_gene)
-
-Hints:
-- starter code is provided but you can solve this in a different way or just add to this script and commit it.
-- a dictionary will be useful for capturing the counts of the numbers or lengths of the different features as you loop through the GFF file
-- the `aspairs()` function returns a dictionary where the keys are sequence IDs and the values are the DNA sequence for each of the contigs.
+![Seed Trays](https://ag.umass.edu/sites/ag.umass.edu/files/fact-sheets/images/openseedtrays.jpg)
