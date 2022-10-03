@@ -1,39 +1,57 @@
-## BioPython
-Using the Biopython library construct scripts to process sequence file.
+# Homework 2
 
-To use biopython on the cluster you will need to do
+This assignment calls for two scripts. They are both started in the template.
+Create the repository by clicking on the HW3 link. https://piazza.com/ucr/fall2022/gen220/resources
+
+## Simple Count and Report
+
+Write a program called `squared_cubed.py` and prints out three columns of data, ideally, separated by tabs.
+A header line should be written which is labels of the columns
 ```
-module load miniconda3
-source activate GEN220
-```
-
-### Short proteins report short_proteins.py
-
-Write a script (`short_proteins.py`) that will read in a fasta file of proteins from a bacteria isolated from an earthworm.
-Download the proteins for [Verminephrobacter eiseniae](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/015/565/GCF_000015565.1_ASM1556v1/GCF_000015565.1_ASM1556v1_protein.faa.gz) and write a script to write out new file with proteins which
-are less than 150 amino acids long.
-
-See the [SeqIO](https://biopython.org/wiki/SeqIO) and [Tutorial](http://biopython.org/DIST/docs/tutorial/Tutorial.html#sec74) give some guidance as well as [lecture notes](https://biodataprog.github.io/GEN220_2021/Python/06_Packages).
-
-### Split files by count split_file.py
-
-Write a script (`split_file.py`) that will read in the same file of proteins from [Verminephrobacter eiseniae](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/015/565/GCF_000015565.1_ASM1556v1/GCF_000015565.1_ASM1556v1_protein.faa.gz).
-This time your script will split the file into smaller chunks - each chunk will have 500 sequences in it.
-(bonus - make the 500 something the user can specify on the commandline instead).
-For each chunk of 500 write out a file. e.g. the first file could be: `chunk1.fa` and will have first 500 sequences, the file `chunk2.fa` will have the sequences 501-1000, etc.
-
-You'll need to have a variable that keeps track of which 'chunk' you are on and one that keeps track of the sequences you want to write out as SeqIO likes to be given an array of sequences to write out all at once.
-
-### Regular expressions count_swissprot.py
-
-Write a script `count_swissprot.py` that will ownload the [Swissprot Database](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz) and open the file (no need to use biopython) using the simple open we have used before.
-
-1.  have the script count the number of proteins which come from the Arabidopsis genus using a regular expression to match lines which that. The species for a protein is in the "OS" field. Eg below you can see a "Solanum tuberosum" protein.
-```
->sp|P93784|14335_SOLTU 14-3-3-like protein 16R OS=Solanum tuberosum OX=4113 PE=2 SV=1
+N    Squared    Cubed
 ```
 
+Column 1: numbers 0 -> 30
+Column 2: Square (x^2) of column 1
+Column 3: Cubes (x^3) of column 2
 
-2. Print out the number of sequences which come from a virus.
-3. Print out the number of proteins which have a description which contains P450
-4. How many have 'MAP kinase' - bonus how would you only count those which were exactly 'MAP kinase' but not 'MAP kinase kinase' or 'MAP kinase kinase kinase'.
+Output should look like this (but going up to at least 30 for for the N column)
+```
+N	Squared	Cubed
+0	0	0
+1	1	1
+2	4	8
+3	9	27
+4	16	64
+5	25	125
+```
+
+## Genome Stats
+
+We will compute some statistics for a tab delimited file called GFF which lists
+the location of genes and exons location in a genome annotation. Remember
+[GFF](https://en.m.wikipedia.org/wiki/General_feature_format) is a
+structured format, tab delimited, which describes locations of
+features in a genome.
+
+Recall eukaryotic Genes are made up of features: exons, introns, Untranslated regions (UTR). Some exons are coded as 'CDS' for CoDing Sequences - eg the ones that code for proteins.
+
+See [Wikipedia gene](https://en.wikipedia.org/wiki/Gene) page and view of [Gene structure in particular](https://en.wikipedia.org/wiki/File:Gene_structure_eukaryote_2_annotated.svg)
+
+Here is a GFF file for the _Penicillium chrysosporium_ genome, which is the fungus which gave us one of the first antibiotics.
+The FungiDB database hosts genome sequences and data files for a collection of fungi.
+
+The GFF file is available here [FungiDB-54_PchrysosporiumRP-78.gff](https://fungidb.org/common/downloads/release-54/PchrysosporiumRP-78/gff/data/FungiDB-54_PchrysosporiumRP-78.gff) and FastA format genome assembly is [FungiDB-54_PchrysosporiumRP-78_Genome.fasta](https://fungidb.org/common/downloads/release-54/PchrysosporiumRP-78/fasta/data/FungiDB-54_PchrysosporiumRP-78_Genome.fasta). These are two files related to location of genes and sequence data.
+
+Write a script called `genome_stats.py` to:
+1. Download these file (this can be in UNIX before you run your python script or you can incorporate this into the python).  I already wrote part of this for you in the template code you can start with that executes a `curl` command from within your script. But if this doesn't make sense to you, you can remove that.
+2. **Print out** the number of exons, CDS, protein_coding_gene features found in the genome annotation (GFF file)
+3. Compute and **print out** the total length of all the protein_coding_gene features (length is the END - START).
+4. Compute and **print out** total length of all the CDS features (length is the END - START).
+5. Use the FASTA file to compute the total length of genome (by adding up the length of each sequence in the file). Recall I lectured on a basic code to read in a FASTA file - you can also see that code template [here](https://github.com/biodataprog/code_templates/blob/master/Lists_Dictionaries/fasta_parser.py), **Print out** the total length.
+6. *Print out* the percentage of the genome which is coding (using the numbers calculated from the protein_coding_gene)
+
+Hints:
+- starter code is provided but you can solve this in a different way or just add to this script and commit it.
+- a dictionary will be useful for capturing the counts of the numbers or lengths of the different features as you loop through the GFF file
+- the `aspairs()` function returns a dictionary where the keys are sequence IDs and the values are the DNA sequence for each of the contigs.
