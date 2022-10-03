@@ -1,56 +1,17 @@
-# Homework 2
+# Homework 1
 
-This assignment calls for two scripts. They are both started in the template.
+Homework can be submitted via the github link which will create a repository for you with basic template of files you can edit to solve the homework. See the the table for homework submission links which will help you create a github repository in the class team.
 
-## Simple Count and Report
+[https://piazza.com/ucr/fall2022/gen220/resources](https://piazza.com/ucr/fall2022/gen220/resources)
 
-Write a program called `squared_cubed.py` and prints out three columns of data, ideally, separated by tabs.
-A header line should be written which is labels of the columns
-```
-N    Squared    Cubed
-```
-
-Column 1: numbers 0 -> 30
-Column 2: Square (x^2) of column 1
-Column 3: Cubes (x^3) of column 2
-
-Output should look like this (but going up to at least 30 for for the N column)
-```
-N	Squared	Cubed
-0	0	0
-1	1	1
-2	4	8
-3	9	27
-4	16	64
-5	25	125
-```
-
-## Genome Stats
-
-We will compute some statistics for a tab delimited file called GFF which lists
-the location of genes and exons location in a genome annotation. Remember
-[GFF](https://en.m.wikipedia.org/wiki/General_feature_format) is a
-structured format, tab delimited, which describes locations of
-features in a genome.
-
-Recall eukaryotic Genes are made up of features: exons, introns, Untranslated regions (UTR). Some exons are coded as 'CDS' for CoDing Sequences - eg the ones that code for proteins.
-
-See [Wikipedia gene](https://en.wikipedia.org/wiki/Gene) page and view of [Gene structure in particular](https://en.wikipedia.org/wiki/File:Gene_structure_eukaryote_2_annotated.svg)
-
-Here is a GFF file for the _Penicillium chrysosporium_ genome, which is the fungus which gave us one of the first antibiotics.
-The FungiDB database hosts genome sequences and data files for a collection of fungi.
-
-The GFF file is available here [FungiDB-54_PchrysosporiumRP-78.gff](https://fungidb.org/common/downloads/release-54/PchrysosporiumRP-78/gff/data/FungiDB-54_PchrysosporiumRP-78.gff) and FastA format genome assembly is [FungiDB-54_PchrysosporiumRP-78_Genome.fasta](https://fungidb.org/common/downloads/release-54/PchrysosporiumRP-78/fasta/data/FungiDB-54_PchrysosporiumRP-78_Genome.fasta). These are two files related to location of genes and sequence data.
-
-Write a script called `genome_stats.py` to:
-1. Download these file (this can be in UNIX before you run your python script or you can incorporate this into the python).  I already wrote part of this for you in the template code you can start with that executes a `curl` command from within your script. But if this doesn't make sense to you, you can remove that.
-2. **Print out** the number of exons, CDS, protein_coding_gene features found in the genome annotation (GFF file)
-3. Compute and **print out** the total length of all the protein_coding_gene features (length is the END - START).
-4. Compute and **print out** total length of all the CDS features (length is the END - START).
-5. Use the FASTA file to compute the total length of genome (by adding up the length of each sequence in the file). Recall I lectured on a basic code to read in a FASTA file - you can also see that code template [here](https://github.com/biodataprog/code_templates/blob/master/Lists_Dictionaries/fasta_parser.py), **Print out** the total length.
-6. *Print out* the percentage of the genome which is coding (using the numbers calculated from the protein_coding_gene)
-
-Hints:
-- starter code is provided but you can solve this in a different way or just add to this script and commit it.
-- a dictionary will be useful for capturing the counts of the numbers or lengths of the different features as you loop through the GFF file
-- the `aspairs()` function returns a dictionary where the keys are sequence IDs and the values are the DNA sequence for each of the contigs.
+1. Create a Github account using [GitHub Accounts](https://github.com)
+2. Submit the homework by creating a repository through github classroom [Homework 2](https://classroom.github.com/a/ePEVSi3q)
+3. Write a shell script called `count_fires.sh` which does all of the following.
+   * Download a comma delimited datasets from https://data.cnra.ca.gov/  which are listing of fires in several decades larger than 5000+. search for "Recent Large Fire Perimiters" in the search box. Click on the dataset it should take you to [this page](https://data.cnra.ca.gov/dataset/recent-large-fire-perimeters-5000-acres1). Download the [CSV file](https://gis.data.cnra.ca.gov/datasets/CALFIRE-Forestry::recent-large-fire-perimeters-5000-acres.csv). (hint use `curl`).
+   * Print out the range of years that occur in this file (hint cut out the column you want, sort and get either the smallest or largest number)
+     * you'll notice there are 2 weird numbers in there "48088" and "6901" - can you tell why? You will need to go into the file and correct something (this is reminder that data are not always clean!) to avoid this problem.
+   * Print out the number of fires in the database (hint use `wc`, remove the header or subtract out the rows )
+   * Print out the number of fires that occur each year (hint use `cut`, `sort` and `uniq -c`)
+   * Print out the name and year of largest fire (hint use `sort`) - use the `GIS_ACRES` column - name is in the column FIRE_NAME
+   * Print out the total acreage burned in each year.
+     * _hint_ you can simply the file by using cut `cut -d, -f2,13 ...` to get the columns you need and awk to accumulate `awk -F',' '{sum+=$2;} END{print sum;}'` - can you filter out just the rows for a given year and add up the numbers for it?
