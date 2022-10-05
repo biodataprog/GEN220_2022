@@ -4,7 +4,6 @@ Homework can be submitted via the github link which will create a repository for
 
 [https://piazza.com/ucr/fall2022/gen220/resources](https://piazza.com/ucr/fall2022/gen220/resources)
 
-1. Create a Github account using [GitHub Accounts](https://github.com)
 2. Submit the homework by creating a repository through github classroom [Homework 2](https://classroom.github.com/a/ePEVSi3q)
 3. Write a shell script called `count_fires.sh` which does all of the following.
    * Download a comma delimited datasets from https://data.cnra.ca.gov/  which are listing of fires in several decades larger than 5000+. search for "Recent Large Fire Perimiters" in the search box. Click on the dataset it should take you to [this page](https://data.cnra.ca.gov/dataset/recent-large-fire-perimeters-5000-acres1). Download the [CSV file](https://gis.data.cnra.ca.gov/datasets/CALFIRE-Forestry::recent-large-fire-perimeters-5000-acres.csv). (hint use `curl`).
