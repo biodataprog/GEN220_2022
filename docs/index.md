@@ -31,10 +31,10 @@ git clone https://github.com/biodataprog/GEN220_data.git
 * [Python](Python) Programming
 * [Bioinformatics](Bioinfomatics) analysis methods
 * Editors
-  ** [VIM/VI](http://hpcc.ucr.edu/manuals_linux-basics_vim.html)
-  ** [Nano](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
-  ** [Emacs](https://www.gnu.org/software/emacs/tour/)
-  ** [Emacs Manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
+  * [VIM/VI](http://hpcc.ucr.edu/manuals_linux-basics_vim.html)
+  * [Nano](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
+  * [Emacs](https://www.gnu.org/software/emacs/tour/)
+  * [Emacs Manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
 
 # Homework
 
