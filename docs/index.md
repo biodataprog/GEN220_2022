@@ -38,9 +38,10 @@ git clone https://github.com/biodataprog/GEN220_data.git
 
 # Homework
 
-* HW1 - [Homework 1](Assignments/HW1) [PDF](Assignments/HW1.pdf)
+* HW1 - See canvas/piazza for github classroom link 
 * HW2 - [Homework 2](Assignments/HW2) [PDF](Assignments/HW2.pdf)
 * HW3 - [Homework 3](Assignments/HW3) [PDF](Assignments/HW3.pdf)
+* HW4 - [Homework 4](Assignments/HW4) [PDF](Assignments/HW4.pdf)
 
 # Project
 
