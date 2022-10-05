@@ -1,4 +1,7 @@
-## BioPython
+# Homework 4
+
+_this may need to get updated - do not use yet_
+
 Using the Biopython library construct scripts to process sequence file.
 
 To use biopython on the cluster you will need to do

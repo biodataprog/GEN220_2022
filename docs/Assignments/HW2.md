@@ -1,4 +1,4 @@
-# Homework 1
+# Homework 2
 
 Homework can be submitted via the github link which will create a repository for you with basic template of files you can edit to solve the homework. See the the table for homework submission links which will help you create a github repository in the class team.
 
