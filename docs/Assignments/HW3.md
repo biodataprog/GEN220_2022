@@ -1,5 +1,7 @@
 # Homework 3
 
+The homework template in [github classroom](https://classroom.github.com/a/J8gwkyZo)
+
 Lists, combinations, and permutations
 
 Consider the experiment you want to establish comparing the interactions between pairs of organisms. This could be plants or microbes where you want to establish these in common growing wells
