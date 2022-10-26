@@ -260,8 +260,6 @@ if 'z' in set1:
    print("z is in set1")
 ```
 
-
-
 ## Functions
 
 These are blocks of code that can be called repeatedly. Simplify tool
