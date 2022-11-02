@@ -432,6 +432,16 @@ blastp -query myquery.fasta -db protseqdb.fasta -out myquery-vs-seqs.BLASTP -out
 ```
 
 
+## Databases
+
+Lots of the data are already installed on the system.
+```bash
+module load db-ncbi
+# will set the varilable $BLASTDB so that
+blastp -db ref_euk_rep_genomes -query query_file.fasta
+```
+
+
 ### DIAMOND indexing
 
 [DIAMOND](https://github.com/bbuchfink/diamond) is a rapid aligner for protein and translated searches which can operate on short sequence reads as well as assembled genomes.  
@@ -443,6 +453,8 @@ module load diamond
 makedb --in my_protein_db.fasta -d mydb
 diamond blastx -d mydb -q reads.fna -o hits.m8
 ```
+
+Some already built diamond DBs for NCBI databases already installed in `/srv/projects/db/ncbi/diamond/` for example you can take a look.
 
 ### Short read aligner database indexing
 
@@ -520,10 +532,3 @@ To retrieve this sequence from the indexed file use
 module load samtools
 samtools fqidx READFILE.fq.gz ERR1309286.4
 ```
-
-## Databases
-
-Lots of the data are already installed on the system.
-```bash
-module load db-blast
-# will 
