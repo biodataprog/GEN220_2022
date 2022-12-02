@@ -57,7 +57,7 @@ cd ~/.html/private
 ln -s ~/bigdata/jbrowse2 .
 cd ~/.html/private/jbrowse2
 
-module load jbrowse/2
+module load jbrowse2
 jbrowse create SARS-CoV-2
 ```
 
